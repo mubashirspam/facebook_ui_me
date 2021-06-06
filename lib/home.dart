@@ -101,6 +101,7 @@ class Home extends StatelessWidget {
               shareCount: '2k',
               postTitle: '',
             ),
+            thickDivider,
            
           ],
         ),
