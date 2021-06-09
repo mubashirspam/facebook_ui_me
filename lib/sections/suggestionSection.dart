@@ -1,13 +1,12 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:my/widgets/suggestionCard.dart';
 
 class SuggestionSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
-      color: Colors.blue,
+      height: 500,
+      
       child: Column(
         children: [
           ListTile(
@@ -15,13 +14,20 @@ class SuggestionSection extends StatelessWidget {
             trailing: IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.more_vert,color: Colors.grey[700],
+                Icons.more_horiz,
+                color: Colors.grey[700],
               ),
             ),
           ),
-          Container(child: Row(
-            
-            children: [],),)
+          Container(
+            height: 390,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                SuggestionCard(),
+              ],
+            ),
+          ),
         ],
       ),
     );
